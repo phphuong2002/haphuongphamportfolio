@@ -91,6 +91,53 @@
   }
 }
 
+.image-container {
+  width: 35rem; 
+  height: 30rem; 
+  background-color: #f0f0f0; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; 
+}
+
+@keyframes flyInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fly-in {
+  animation: flyInFromLeft 0.8s ease-out forwards;
+}
+
+@keyframes flyInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-top {
+  animation: flyInFromTop 0.8s ease-out forwards;
+}
+
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
@@ -11580,15 +11627,15 @@ html {
 
 .profile {
   position: relative;
-  height: 75vw;
-  width: 75vw;
+  height: 60vw;
+  width: 60vw;
   border-radius: 5vw;
   margin-top: 5vw;
   max-height: 40rem;
   max-width: 40rem;
 }
 .profile .profile-img {
-  height: 80vw;
+  height: 65vw;
   max-height: 45rem;
   position: absolute;
   bottom: 0;
@@ -11709,11 +11756,11 @@ html {
 }
 @media (min-width: 1200px) {
   .profile {
-    height: 35vw;
-    width: 35vw;
+    height: 30vw;
+    width: 30vw;
   }
   .profile .profile-img {
-    height: 40vw;
+    height: 37vw;
   }
   .profile .dots-1 {
     width: 1.5vw;
@@ -11731,4 +11778,17 @@ html {
     width: 1.5vw;
     left: -2vw;
   }
+}
+
+.back-to-top{
+  position: fixed;
+    bottom: 50px;
+    right: 50px;
+    float: right;
+    height: 60px;
+    width: 60px;
+}
+
+.back-to-top i{
+  font-size: 60px;
 }
