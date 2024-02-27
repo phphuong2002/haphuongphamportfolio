@@ -111,7 +111,7 @@
 @keyframes flyInFromLeft {
   from {
     opacity: 0;
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 
   to {
@@ -127,7 +127,7 @@
 @keyframes flyInFromTop {
   from {
     opacity: 0;
-    transform: translateY(-50%);
+    transform: translateY(-100%);
   }
 
   to {
@@ -13799,4 +13799,56 @@ html {
 
 .back-to-top:hover i {
   color: white;
+}
+
+.card-body {
+  position: relative;
+  overflow: hidden; 
+}
+
+.volunteer {
+  position: absolute;
+  bottom: -100%; 
+  left: 0;
+  width: 100%; 
+  transition: bottom 0.5s ease-out; 
+  z-index: 10; 
+}
+
+.card-body:hover .volunteer {
+  bottom: 0; 
+}
+
+.typing {
+  width: min-content;
+  overflow: hidden;
+  border-right: 0.1rem solid black;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation:
+    typing 3.5s steps(56, end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: black;
+  }
 }
