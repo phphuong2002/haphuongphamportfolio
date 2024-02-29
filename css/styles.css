@@ -93,7 +93,6 @@
 }
 
 .image-container {
-  width: 35rem;
   height: 30rem;
   background-color: #f0f0f0;
   display: flex;
@@ -13850,5 +13849,12 @@ html {
 
   50% {
     border-color: black;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .experience-section {
+    flex-wrap: wrap;
+    height: 12vh;
   }
 }
