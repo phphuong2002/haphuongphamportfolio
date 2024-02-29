@@ -13820,13 +13820,13 @@ html {
 
 .typing {
   width: min-content;
+  text-wrap: nowrap;
   overflow: hidden;
   border-right: 0.1rem solid black;
-  white-space: nowrap;
   margin: 0 auto;
   letter-spacing: .15em;
   animation:
-    typing 3.5s steps(56, end),
+    typing 3.5s steps(58, end),
     blink-caret .75s step-end infinite;
 }
 
@@ -13856,5 +13856,12 @@ html {
   .experience-section {
     flex-wrap: wrap;
     height: 12vh;
+  }
+
+  .typing{
+    animation: none;
+    white-space: normal;
+    border: none;
+    width: auto;
   }
 }
